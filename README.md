@@ -2,4 +2,4 @@
 
 (JavaScript, JQuery, CSS)
 
-Implements 2-player Tic Tac Toe game. Players are blue/red.
+Implements Towers of Hanoi game. To perform a move, click on the first pile to select the first tile and then click the secon pile to transfer the tile into.
