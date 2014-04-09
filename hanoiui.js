@@ -5,6 +5,7 @@
 		this.game = game;
 		this.towers = game.towers;
 		this.board = board;
+    this.numTurns = 0;
 
 		this.render();
 		this.board.find('.pile').on("click", this.handleStartTowerClick.bind(this));
@@ -38,7 +39,7 @@
 		var that = this;
 		var game = this.game;
 		var startTower = $(event.target).data("id");
-    $(event.target).css("background-color","yellow");
+    $(".pile[data-id='"+startTower+"']").css("background-color","#402D00");
 		console.log(startTower);
 
 		this.board.find('.pile').off("click");
@@ -56,14 +57,17 @@
 
     if (game.move(startTower, endTower)) {
       this.render();
+      this.numTurns += 1;
+      $('#turns').html(this.numTurns);
     } else {
       alert("Invalid move!");
     }
     
-    $(".pile").css("background-color","#8EA9FA");
+    $(".pile").css("background-color","transparent");
 
     if (game.isWon()) {
-      alert("You win!");
+      alert("You win! You took " + this.numTurns + " turns");
+      window.location.reload();
     } else {
       this.board.find('.pile').on("click", this.handleStartTowerClick.bind(this));
     };
