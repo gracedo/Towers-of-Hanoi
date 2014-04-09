@@ -38,6 +38,7 @@
 		var that = this;
 		var game = this.game;
 		var startTower = $(event.target).data("id");
+    $(event.target).css("background-color","yellow");
 		console.log(startTower);
 
 		this.board.find('.pile').off("click");
@@ -58,6 +59,8 @@
     } else {
       alert("Invalid move!");
     }
+    
+    $(".pile").css("background-color","#8EA9FA");
 
     if (game.isWon()) {
       alert("You win!");
