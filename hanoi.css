@@ -7,10 +7,15 @@ body {
   background-size: 100%;
 }
 
+.instructions {
+  width: 70%;
+  font-family: helvetica;
+}
+
 h1 {
 	font-weight: bold;
-	font-size: 60px;
-  margin-bottom: 5px;
+	font-size: 56px;
+  margin-bottom: 0px;
 }
 
 .container {
