@@ -42,6 +42,10 @@ div.pile {
 /*  border: 2px #000000 solid;*/
 }
 
+.dummy {
+  min-height: 120px;
+}
+
 .size1 {
 	height: 40px;
 	width: 20%;

@@ -19,13 +19,12 @@
 
 		for (var p = 0; p < towers.length; p++) {
 			for (var d = 0; d < towers[p].length; d++) {
-				var disc = $('.disc')[p*8+d];
+				var disc = $('.disc')[p*7+d];
 				$(disc).addClass(game.getSize(towers[p][d]));
 			}
       var dummyHeight = ((7-towers[p].length)*40)+120;
       // $($('.dummy')[p]).css("height", toString(dummyHeight) + "px");
       $($('.dummy')[p]).height(dummyHeight);
-      debugger
 		}
 	};
 
