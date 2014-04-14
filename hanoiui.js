@@ -22,6 +22,10 @@
 				var disc = $('.disc')[p*8+d];
 				$(disc).addClass(game.getSize(towers[p][d]));
 			}
+      var dummyHeight = ((7-towers[p].length)*40)+120;
+      // $($('.dummy')[p]).css("height", toString(dummyHeight) + "px");
+      $($('.dummy')[p]).height(dummyHeight);
+      debugger
 		}
 	};
 
