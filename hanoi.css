@@ -19,13 +19,14 @@ h1 {
 }
 
 .container {
-  height: 500px;
+  height: 400px;
 	width: 900px;
 	background: transparent;
 }
 
 div.pile {
-	height: 95%;
+/*  height: 95%;*/
+  min-height: 100%;
 	width: 30%;
 	background: transparent;
 	float: left;
@@ -33,6 +34,7 @@ div.pile {
 	margin: 10px;
 	position: relative;
 	top: 0px;
+  padding-bottom: 0;
 }
 
 .disc {
@@ -40,26 +42,41 @@ div.pile {
 /*  border: 2px #000000 solid;*/
 }
 
-.small {
-	height: 70px;
-	width: 33%;
-	position: absolute;
-	bottom: 190px;
-	left: 90px;
+.dummy {
+  height: 120px;
 }
 
-.med {
-	height: 80px;
-	width: 55%;
-	position: absolute;
-	bottom: 100px;
-	left: 60px;
+.size1 {
+	height: 40px;
+	width: 30%;
 }
 
-.large {
-	height: 90px;
-	width: 85%;
-	position: absolute;
-	bottom: 0px;
-	left: 20px;
+.size2 {
+	height: 40px;
+	width: 40%;
+}
+
+.size3 {
+	height: 40px;
+	width: 50%;
+}
+
+.size4 {
+	height: 40px;
+	width: 60%;
+}
+
+.size5 {
+	height: 40px;
+	width: 70%;
+}
+
+.size6 {
+	height: 40px;
+	width: 80%;
+}
+
+.size7 {
+	height: 40px;
+	width: 90%;
 }

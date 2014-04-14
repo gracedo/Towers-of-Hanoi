@@ -15,37 +15,32 @@
 		game = this;
 		towers = this.towers;
 
-		$('.disc').removeClass('small med large'); //clear towers
+		$('.disc').removeClass('size1 size2 size3 size4 size5 size6 size7'); //clear towers
 
 		for (var p = 0; p < towers.length; p++) {
 			for (var d = 0; d < towers[p].length; d++) {
-				var disc = $('.disc')[p*3+d];
+				var disc = $('.disc')[p*8+d];
 				$(disc).addClass(game.getSize(towers[p][d]));
 			}
 		}
 	};
 
 	GameUI.prototype.getSize = function(num) {
-		if (num === 1) {
-			return "small";
-		} else if (num === 2){
-			return "med";
-		} else {
-			return "large";
-		}
+    return "size" + num;
 	};
 
 	GameUI.prototype.handleStartTowerClick = function(event) {
 		var that = this;
 		var game = this.game;
-		var startTower = $(event.target).data("id");
+
+		var startTower = $(event.currentTarget).data("id");
     $(".pile[data-id='"+startTower+"']").css("background-color","#402D00");
 		console.log(startTower);
 
 		this.board.find('.pile').off("click");
 
 		this.board.find('.pile').on("click", function(e) {
-			var endTower = $(e.target).data("id");
+			var endTower = $(e.currentTarget).data("id");
 			console.log(endTower);
 			that.board.find('.pile').off("click");
 			that.takeTurn(+startTower, +endTower);
